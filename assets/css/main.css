@@ -460,6 +460,77 @@ body {
   border-color: #4dd0e1;
 }
 
+/* ===== Packages Preview ===== */
+.packages-preview {
+  background: #0f0f0f;
+  padding: 80px 20px;
+}
+
+.packages-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.packages-preview h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.packages-intro {
+  color: #aaa;
+  margin-bottom: 50px;
+  font-size: 15px;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* Package Card */
+.package-card {
+  background: #151515;
+  padding: 30px 26px;
+  border-radius: 12px;
+  border: 1px solid #222;
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+.package-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.package-card .price {
+  color: #4dd0e1;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.package-card ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.package-card ul li {
+  font-size: 14px;
+  color: #bbb;
+  margin-bottom: 8px;
+}
+
+.package-card:hover {
+  transform: translateY(-6px);
+  border-color: #4dd0e1;
+}
+
+/* Featured Package */
+.package-card.featured {
+  border: 2px solid #4dd0e1;
+}
+
 
 
 
