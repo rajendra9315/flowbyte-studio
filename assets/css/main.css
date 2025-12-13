@@ -833,6 +833,35 @@ body {
   text-decoration: underline;
 }
 
+/* === Telegram Popup FINAL FIX === */
+.popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background: #151515;
+  border-radius: 12px;
+  max-width: 260px;
+}
+
+.popup-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 18px;
+}
+
+.popup-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.popup-btn {
+  position: static !important;
+  margin: 0;
+  align-self: flex-start;
+}
 
 
 
