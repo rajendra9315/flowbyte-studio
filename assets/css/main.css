@@ -744,6 +744,30 @@ body {
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
+/* Testimonials */
+.testimonials {
+  background: #0f0f0f;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.testimonial-box {
+  max-width: 700px;
+  margin: auto;
+  background: #151515;
+  padding: 30px;
+  border-radius: 10px;
+  color: #ccc;
+  font-size: 15px;
+}
+
+.testimonial-box span {
+  display: block;
+  margin-top: 10px;
+  color: #4dd0e1;
+}
+
+
 
 
 
