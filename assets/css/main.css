@@ -222,5 +222,66 @@ body {
   }
 }
 
+/* ===== Services Section ===== */
+.services {
+  background: #0f0f0f;
+  padding: 80px 20px;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.services-intro {
+  color: #aaa;
+  margin-bottom: 50px;
+  font-size: 15px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* Service Card */
+.service-card {
+  background: #151515;
+  padding: 26px;
+  border-radius: 10px;
+  text-align: left;
+  transition: 0.3s ease;
+  border: 1px solid #222;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #bbb;
+  margin-bottom: 16px;
+}
+
+.service-card a {
+  color: #4dd0e1;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: #4dd0e1;
+}
+
 
 
