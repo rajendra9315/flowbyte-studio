@@ -767,6 +767,20 @@ body {
   color: #4dd0e1;
 }
 
+/* Telegram Popup */
+.popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #151515;
+  padding: 16px;
+  border-radius: 10px;
+  display: none;
+  z-index: 1000;
+}
+
+
+
 
 
 
