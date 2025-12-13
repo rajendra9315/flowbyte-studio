@@ -30,3 +30,22 @@ if (heroHeading) {
   }, 3000);
 }
 
+// Testimonial slider
+const testimonials = [
+  "Professional work, fast delivery, and clear communication.",
+  "Great experience working with Flowbyte Studio.",
+  "Clean design and reliable support."
+];
+
+let tIndex = 0;
+const testimonialBox = document.getElementById("testimonial");
+
+if (testimonialBox) {
+  setInterval(() => {
+    tIndex = (tIndex + 1) % testimonials.length;
+    testimonialBox.innerHTML =
+      `“${testimonials[tIndex]}”<span>— Client Review</span>`;
+  }, 4000);
+}
+
+
