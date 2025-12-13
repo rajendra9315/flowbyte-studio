@@ -48,4 +48,10 @@ if (testimonialBox) {
   }, 4000);
 }
 
+// Telegram popup
+setTimeout(() => {
+  const popup = document.getElementById("tgPopup");
+  if (popup) popup.style.display = "block";
+}, 6000);
+
 
