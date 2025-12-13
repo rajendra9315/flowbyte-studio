@@ -778,6 +778,21 @@ body {
   display: none;
   z-index: 1000;
 }
+/* Contact page fix */
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-card p {
+  order: 1;
+}
+
+.contact-card a {
+  order: 2;
+}
+
 
 
 
