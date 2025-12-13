@@ -283,5 +283,67 @@ body {
   border-color: #4dd0e1;
 }
 
+/* ===== Popular Services ===== */
+.popular-services {
+  background: #0e0e0e;
+  padding: 80px 20px;
+}
+
+.popular-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.popular-services h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.popular-intro {
+  color: #aaa;
+  margin-bottom: 50px;
+  font-size: 15px;
+}
+
+.popular-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* Popular Card */
+.popular-card {
+  background: #151515;
+  padding: 26px;
+  border-radius: 10px;
+  text-align: left;
+  border: 1px solid #222;
+  transition: 0.3s ease;
+}
+
+.popular-card h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.popular-card p {
+  font-size: 14px;
+  color: #bbb;
+  margin-bottom: 16px;
+}
+
+.popular-card a {
+  color: #4dd0e1;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.popular-card:hover {
+  transform: translateY(-6px);
+  border-color: #4dd0e1;
+}
+
+
 
 
