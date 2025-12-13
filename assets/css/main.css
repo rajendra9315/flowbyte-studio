@@ -27,6 +27,7 @@ body {
   justify-content: space-between;
 }
 
+
 /* Logo */
 .logo {
   font-size: 22px;
@@ -65,4 +66,22 @@ body {
   font-size: 13px;
   color: #4dd0e1;
 }
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-social {
+    justify-content: center;
+  }
+}
+
 
