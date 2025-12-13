@@ -659,6 +659,63 @@ body {
   margin-top: 40px;
 }
 
+/* ===== Services Page ===== */
+.services-page-hero {
+  background: #0f0f0f;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.services-page-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.services-note {
+  color: #aaa;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+/* Accordion */
+.accordion {
+  margin-bottom: 16px;
+  border: 1px solid #222;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #151515;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 16px 20px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.accordion-header:hover {
+  background: #1c1c1c;
+}
+
+.accordion-content {
+  display: none;
+  padding: 16px 24px;
+  border-top: 1px solid #222;
+}
+
+.accordion-content ul {
+  list-style: none;
+}
+
+.accordion-content li {
+  font-size: 14px;
+  color: #bbb;
+  margin-bottom: 8px;
+}
 
 
 
