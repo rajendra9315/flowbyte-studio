@@ -1,5 +1,17 @@
 /* Main CSS file */
 /* ===== Global Reset ===== */
+section {
+  margin-bottom: 40px;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.3px;
+}
+
+p {
+  line-height: 1.6;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -718,6 +730,20 @@ body {
   color: #bbb;
   margin-bottom: 8px;
 }
+
+.btn {
+  font-weight: 600;
+}
+
+.service-card,
+.popular-card,
+.package-card,
+.why-card,
+.how-step,
+.contact-card {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
 
 
 
