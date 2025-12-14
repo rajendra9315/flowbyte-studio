@@ -916,90 +916,8 @@ body {
   }
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .carousel-track img {
-    width: 260px;
-    height: 170px;
-  }
-}
 
 
-/* =========================
-   CAROUSEL SECTION
-========================= */
-
-.carousel-section {
-  padding: 60px 20px;
-  background: #0b0f1a;
-  overflow: hidden;
-}
-
-/* Container */
-.carousel-container {
-  max-width: 1100px;
-  margin: auto;
-  overflow: hidden;
-}
-
-/* Track */
-.carousel-track {
-  display: flex;
-  gap: 20px;
-  animation: scroll 25s linear infinite;
-}
-
-/* Images */
-.carousel-track img {
-  width: 320px;
-  height: 200px;
-  object-fit: cover;              /* 🔥 PERFECT FIT */
-  border-radius: 16px;
-  flex-shrink: 0;
-  display: block;
-  cursor: pointer;
-
-  /* Smooth transitions */
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease,
-    filter 0.35s ease;
-}
-
-/* Hover effect */
-.carousel-track img:hover {
-  transform: scale(1.06);
-  filter: brightness(1.1);
-
-  /* 🔥 GLOWING SIDES */
-  box-shadow:
-    0 0 12px rgba(0, 180, 255, 0.6),
-    0 0 25px rgba(0, 180, 255, 0.45),
-    0 0 45px rgba(0, 180, 255, 0.25);
-}
-
-/* Auto scroll animation */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .carousel-track img {
-    width: 260px;
-    height: 160px;
-  }
-}
-
-/* Pause animation on hover (optional but premium) */
-.carousel-container:hover .carousel-track {
-  animation-play-state: paused;
-}
 
 
 /* =========================
@@ -1007,14 +925,14 @@ body {
 ========================= */
 
 .carousel-section {
-  padding: 70px 20px;
+  padding: 100px 100px;
   background: #0b0f1a;
   overflow: hidden;
 }
 
 /* Container */
 .carousel-container {
-  max-width: 1200px;          /* 🔥 wider container */
+  max-width: 1500px;          /* 🔥 wider container */
   margin: auto;
   overflow: hidden;
 }
@@ -1029,7 +947,7 @@ body {
 /* IMAGE BOX (BIGGER) */
 .carousel-track img {
   width: 420px;               /* 🔥 BIGGER BOX */
-  height: 260px;              /* 🔥 BIGGER BOX */
+  height: 500px;              /* 🔥 BIGGER BOX */
   object-fit: cover;          /* image fits perfectly */
   border-radius: 20px;
   flex-shrink: 0;
