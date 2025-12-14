@@ -832,7 +832,6 @@ body {
 .portfolio-links a:hover {
   text-decoration: underline;
 }
-
 /* === Telegram Popup FINAL FIX === */
 .popup {
   position: fixed;
@@ -924,7 +923,6 @@ body {
     height: 170px;
   }
 }
-
 
 
 
