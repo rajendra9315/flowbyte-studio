@@ -1002,6 +1002,84 @@ body {
 }
 
 
+/* =========================
+   CAROUSEL – FIXED SIZE + GLOW
+========================= */
+
+.carousel-section {
+  padding: 70px 20px;
+  background: #0b0f1a;
+  overflow: hidden;
+}
+
+/* Container */
+.carousel-container {
+  max-width: 1200px;          /* 🔥 wider container */
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Track */
+.carousel-track {
+  display: flex;
+  gap: 28px;                  /* more spacing */
+  animation: scroll 28s linear infinite;
+}
+
+/* IMAGE BOX (BIGGER) */
+.carousel-track img {
+  width: 420px;               /* 🔥 BIGGER BOX */
+  height: 260px;              /* 🔥 BIGGER BOX */
+  object-fit: cover;          /* image fits perfectly */
+  border-radius: 20px;
+  flex-shrink: 0;
+  display: block;
+  cursor: pointer;
+
+  /* 🔥 DEFAULT GLOW (BEFORE HOVER) */
+  box-shadow:
+    0 0 10px rgba(0, 180, 255, 0.35),
+    0 0 25px rgba(0, 180, 255, 0.20);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    filter 0.4s ease;
+}
+
+/* 🔥 STRONG GLOW + ZOOM ON HOVER */
+.carousel-track img:hover {
+  transform: scale(1.08);
+  filter: brightness(1.12);
+
+  box-shadow:
+    0 0 18px rgba(0, 180, 255, 0.75),
+    0 0 40px rgba(0, 180, 255, 0.55),
+    0 0 70px rgba(0, 180, 255, 0.35);
+}
+
+/* Auto scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause animation on hover */
+.carousel-container:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+/* 📱 MOBILE FIX */
+@media (max-width: 768px) {
+  .carousel-track img {
+    width: 300px;
+    height: 190px;
+  }
+}
 
 
 
