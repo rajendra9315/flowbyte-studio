@@ -932,7 +932,7 @@ body {
 
 /* Container */
 .carousel-container {
-  max-width: 1500px;          /* 🔥 wider container */
+  max-width: 2000px;          /* 🔥 wider container */
   margin: auto;
   overflow: hidden;
 }
@@ -946,7 +946,7 @@ body {
 
 /* IMAGE BOX (BIGGER) */
 .carousel-track img {
-  width: 420px;               /* 🔥 BIGGER BOX */
+  width: 600px;               /* 🔥 BIGGER BOX */
   height: 500px;              /* 🔥 BIGGER BOX */
   object-fit: cover;          /* image fits perfectly */
   border-radius: 20px;
