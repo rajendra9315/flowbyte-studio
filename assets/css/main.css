@@ -878,117 +878,58 @@ body {
 .logo span {
   color: #fff;
 }
-/* CAROUSEL */
-.carousel-section {
-  padding: 60px 20px;
-  background: #0d0f14;
-  overflow: hidden;
-}
-
-.carousel-container {
-  max-width: 1100px;
-  margin: auto;
-  overflow: hidden;
-  border-radius: 20px;
-}
-
-.carousel-track {
-  display: flex;
-  gap: 20px;
-  animation: scroll 25s linear infinite;
-}
-
-.carousel-track img {
-  width: 320px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 15px;
-  flex-shrink: 0;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
 
 /* =========================
-   SWIPEABLE IMAGE STRIP
+   SINGLE IMAGE SWIPE CAROUSEL
 ========================= */
 
-.carousel-section {
-  padding: 60px 0;
+.single-carousel {
+  width: 100%;
+  overflow: hidden;
   background: #0b0f1a;
-  overflow-x: hidden;
 }
 
-/* Horizontal image strip */
-.carousel-track {
+/* Track */
+.single-track {
   display: flex;
-  gap: 32px;
-  padding: 20px;
-  overflow-x: auto;                 /* 🔥 enables swipe */
+  width: 100%;
+  overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
 }
 
-/* Hide scrollbar (clean look) */
-.carousel-track::-webkit-scrollbar {
+/* Hide scrollbar */
+.single-track::-webkit-scrollbar {
   display: none;
 }
-.carousel-track {
+.single-track {
   scrollbar-width: none;
 }
 
-/* BIG DIRECT IMAGES */
-.carousel-track img {
-  width: 520px;                     /* 🔥 BIG WIDTH */
-  height: 280px;                    /* height OK */
+/* ONE IMAGE PER SWIPE */
+.single-track img {
+  min-width: 100%;
+  height: 400px;              /* 🔥 BIG HEIGHT */
   object-fit: cover;
-  border-radius: 22px;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   flex-shrink: 0;
   display: block;
-  cursor: grab;
 
-  /* 🔥 DEFAULT GLOW (BEFORE HOVER) */
+  /* subtle glow */
+  box-shadow: 0 0 30px rgba(0, 180, 255, 0.35);
+  transition: box-shadow 0.4s ease;
+}
+
+/* hover glow (desktop) */
+.single-track img:hover {
   box-shadow:
-    0 0 14px rgba(0, 200, 255, 0.35),
-    0 0 30px rgba(0, 200, 255, 0.20);
-
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease,
-    filter 0.4s ease;
+    0 0 45px rgba(0, 180, 255, 0.7),
+    0 0 80px rgba(0, 180, 255, 0.4);
 }
 
-/* 🔥 HOVER EFFECT (DESKTOP) */
-.carousel-track img:hover {
-  transform: scale(1.06);
-  filter: brightness(1.1);
-  box-shadow:
-    0 0 22px rgba(0, 200, 255, 0.75),
-    0 0 50px rgba(0, 200, 255, 0.55),
-    0 0 90px rgba(0, 200, 255, 0.35);
-}
-
-/* Active grab feel */
-.carousel-track img:active {
-  cursor: grabbing;
-}
-
-/* 📱 MOBILE TUNING */
+/* Mobile height */
 @media (max-width: 768px) {
-  .carousel-track img {
-    width: 360px;                  /* still big on mobile */
-    height: 220px;
+  .single-track img {
+    height: 450px;
   }
 }
-
-
-
-
