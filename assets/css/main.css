@@ -916,48 +916,49 @@ body {
   }
 }
 
-
-
-
-
 /* =========================
-   CAROUSEL – FIXED SIZE + GLOW
+   SWIPEABLE IMAGE STRIP
 ========================= */
 
 .carousel-section {
-  padding: 100px 100px;
+  padding: 60px 0;
   background: #0b0f1a;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
-/* Container */
-.carousel-container {
-  max-width: 2000px;          /* 🔥 wider container */
-  margin: auto;
-  overflow: hidden;
-}
-
-/* Track */
+/* Horizontal image strip */
 .carousel-track {
   display: flex;
-  gap: 28px;                  /* more spacing */
-  animation: scroll 28s linear infinite;
+  gap: 32px;
+  padding: 20px;
+  overflow-x: auto;                 /* 🔥 enables swipe */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
-/* IMAGE BOX (BIGGER) */
+/* Hide scrollbar (clean look) */
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+.carousel-track {
+  scrollbar-width: none;
+}
+
+/* BIG DIRECT IMAGES */
 .carousel-track img {
-  width: 600px;               /* 🔥 BIGGER BOX */
-  height: 500px;              /* 🔥 BIGGER BOX */
-  object-fit: cover;          /* image fits perfectly */
-  border-radius: 20px;
+  width: 520px;                     /* 🔥 BIG WIDTH */
+  height: 280px;                    /* height OK */
+  object-fit: cover;
+  border-radius: 22px;
+  scroll-snap-align: center;
   flex-shrink: 0;
   display: block;
-  cursor: pointer;
+  cursor: grab;
 
   /* 🔥 DEFAULT GLOW (BEFORE HOVER) */
   box-shadow:
-    0 0 10px rgba(0, 180, 255, 0.35),
-    0 0 25px rgba(0, 180, 255, 0.20);
+    0 0 14px rgba(0, 200, 255, 0.35),
+    0 0 30px rgba(0, 200, 255, 0.20);
 
   transition:
     transform 0.4s ease,
@@ -965,40 +966,28 @@ body {
     filter 0.4s ease;
 }
 
-/* 🔥 STRONG GLOW + ZOOM ON HOVER */
+/* 🔥 HOVER EFFECT (DESKTOP) */
 .carousel-track img:hover {
-  transform: scale(1.08);
-  filter: brightness(1.12);
-
+  transform: scale(1.06);
+  filter: brightness(1.1);
   box-shadow:
-    0 0 18px rgba(0, 180, 255, 0.75),
-    0 0 40px rgba(0, 180, 255, 0.55),
-    0 0 70px rgba(0, 180, 255, 0.35);
+    0 0 22px rgba(0, 200, 255, 0.75),
+    0 0 50px rgba(0, 200, 255, 0.55),
+    0 0 90px rgba(0, 200, 255, 0.35);
 }
 
-/* Auto scroll animation */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+/* Active grab feel */
+.carousel-track img:active {
+  cursor: grabbing;
 }
 
-/* Pause animation on hover */
-.carousel-container:hover .carousel-track {
-  animation-play-state: paused;
-}
-
-/* 📱 MOBILE FIX */
+/* 📱 MOBILE TUNING */
 @media (max-width: 768px) {
   .carousel-track img {
-    width: 300px;
-    height: 190px;
+    width: 360px;                  /* still big on mobile */
+    height: 220px;
   }
 }
-
 
 
 
