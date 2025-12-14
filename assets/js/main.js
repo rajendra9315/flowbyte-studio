@@ -75,3 +75,17 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 6000);
 
 });
+
+
+const carousel = document.querySelector('.carousel-track');
+
+if (carousel) {
+  carousel.addEventListener('mouseenter', () => {
+    carousel.style.animationPlayState = 'paused';
+  });
+
+  carousel.addEventListener('mouseleave', () => {
+    carousel.style.animationPlayState = 'running';
+  });
+}
+
